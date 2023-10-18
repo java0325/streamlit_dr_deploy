@@ -1,0 +1,4 @@
+data,place,company,runner_name,avg_speed,current_speed,stride,steps
+2023-09-14,인천 문학 경기장,9.57,조재훈,8 m/s,7 m/s,1.8 m,228 steps/m
+2023-09-01,용인종합운동장,빛나,신윤복,8 m/s,7 m/s,1.9 m,229 steps/m
+2023-08-15,인천아시아드 주경기장,하니,홍길동,8 m/s,7 m/s,1.10 m,230 steps/m

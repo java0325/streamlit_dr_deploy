@@ -66,9 +66,9 @@ average_cadence = round(df_stride_cadence['cadence'].mean(), 2)
 
 # 두 번째 컬럼에 데이터 값 표시
 with col2:
-    st.write(f'Average Speed: {average_speed} second')    
-    st.write(f'Stride: {average_stride} m/s')  # 수정된 부분
-    st.write(f'Steps: {average_cadence} m/s')  # 수정된 부분     
+    st.write(f'Average Speed: {average_speed} m/s')    
+    st.write(f'Stride: {average_stride} m')  # 수정된 부분
+    st.write(f'Cadence: {average_cadence} steps/m')  # 수정된 부분     
 
 # CSV 파일 로드
 csv_file = selected_data['body_speed_csv_file'].values[0]

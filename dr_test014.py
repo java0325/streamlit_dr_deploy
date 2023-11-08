@@ -52,7 +52,8 @@ td, th {{
 # video_file = '/Users/jasper0325/Documents/workspace/codes/streamlit_dr_deploy/result_6angles230817_2_h264_codec.mp4'
 
 # # 코덱 H264인코딩 문제! 지우지 말것!!
-# # fmpeg -i result_6angles230817_2.mp4 -vcodec libx264 result_6angles230817_2_h264_codec.mp4
+# # ffmpeg -i result_6angles230817_2.mp4 -vcodec libx264 result_6angles230817_2_h264_codec.mp4
+# # ffmpeg -i output_kor20230728f00001_20230902_001.mp4 -vcodec libx264 output_kor20230728f00001_20230902_001_h264_codec.mp4
 
 # # # Streamlit을 사용하여 비디오 디스플레이
 # # st.video(video_file)
@@ -67,19 +68,21 @@ td, th {{
 # st.markdown(video_html, unsafe_allow_html=True)
 
 # 비디오 파일 경로 설정
-filename = "/Users/jasper0325/Documents/workspace/codes/streamlit_dr_deploy/result_6angles230817_2_h264_codec.mp4"
+# filename = "/Users/jasper0325/Documents/workspace/codes/streamlit_dr_deploy/result_6angles230817_2_h264_codec.mp4"
+# /Users/jasper0325/Documents/workspace/codes/streamlit_dr_deploy/output_kor20230728f00001_20230902_001_h264_codec.mp4
+# filename = "result_6angles230817_2_h264_codec.mp4"
+filename = "output_kor20230728f00001_20230902_001_h264_codec.mp4"
 
 video_file = open(filename, 'rb')
 video_bytes = video_file.read()
-st.video(video_bytes)
+st.video(video_bytes) 
 
+# # 이미지 파일 경로 가져오기
+# img_file = selected_data['img_file'].values[0]
 
-# 이미지 파일 경로 가져오기
-img_file = selected_data['img_file'].values[0]
-
-# 이미지 로딩
-image = Image.open(img_file)
-st.image(image, use_column_width=True)
+# # 이미지 로딩
+# image = Image.open(img_file)
+# st.image(image, use_column_width=True)
 
 # CSV 파일 로드 및 body_speed의 평균값 계산
 csv_file = selected_data['body_speed_csv_file'].values[0]

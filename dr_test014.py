@@ -55,6 +55,11 @@ td, th {{
 # # ffmpeg -i result_6angles230817_2.mp4 -vcodec libx264 result_6angles230817_2_h264_codec.mp4
 # # ffmpeg -i output_kor20230728f00001_20230902_001.mp4 -vcodec libx264 output_kor20230728f00001_20230902_001_h264_codec.mp4
 
+## 비디오파일 자르기
+# # ffmpeg -i output_kor20230728f00001_20230902_001_h264_codec.mp4 -ss 00:00:00 -t 00:50:00 output_20230902_001_h264_codec.mp4
+
+## 해상도 조정하기
+## ffmpeg -i output_kor20230728f00001_20230902_001_h264_codec.mp4 -vf scale=1280:720 output_20230902_002_h264_codec.mp4
 # # # Streamlit을 사용하여 비디오 디스플레이
 # # st.video(video_file)
 
@@ -71,7 +76,7 @@ td, th {{
 # filename = "/Users/jasper0325/Documents/workspace/codes/streamlit_dr_deploy/result_6angles230817_2_h264_codec.mp4"
 # /Users/jasper0325/Documents/workspace/codes/streamlit_dr_deploy/output_kor20230728f00001_20230902_001_h264_codec.mp4
 # filename = "result_6angles230817_2_h264_codec.mp4"
-filename = "output_kor20230728f00001_20230902_001_h264_codec.mp4"
+filename = "output_20230902_002_h264_codec.mp4" 
 
 video_file = open(filename, 'rb')
 video_bytes = video_file.read()

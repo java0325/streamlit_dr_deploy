@@ -1,4 +1,4 @@
-# 주석 정리
+# video 처리완료
 
 import pandas as pd
 import streamlit as st
